@@ -1,0 +1,30 @@
+{% extends "Machine/layout.html" %}
+{% block title %}
+
+Paper
+
+{% endblock %}
+
+{% block content %}
+
+<h3 class="RED">Abstract</h3>
+<span class="message">Music mood classification is one of the important features in music recommendation. To enhance the quality of music recommendation, the authors propose a method to examine moods of songs based on both lyric and audio to see if there is any improvement in comparison to other method using Naïve Bayes classification. By combining word embedding feature with CNN model for lyrics and LSTM network for MFCC features retrieved from the dataset, our result can be up to 74.5% in comparison to 72.5% of the existed project.</span>
+
+
+<h3 class="RED">Introduction</h3>
+<span class="message">In recent years, many methods for music classification have been proposed. Music can be classified according to artist, genre, instrument or mood of the song, a new and important attribute of music. The approach to music classification varies in different ways like using subjective human feedbacks or user tags, but this method has very little dataset and it’s hard to collect those data since users are not always willing to provide their feedbacks. Another  approach is classifying based on its characteristic like the audio and lyrics. This approach requires processing on both language and sound but it is difficult to evaluate exactly the mood for the songs since it depends not only on the song’s characteristic but also on the situations it is played and the feeling of different people. There are several researches on this topic [2][3][4] and standard ground truth for it has been improved day by day such as MIREX. Although dataset collected by MIREX has high reputation and is created by many experts, the dataset is limited and is not enough for being train in deep learning. Another reliable one is MoodyLyrics, which uses valence and arousal values of the word based on Russell’s model and consists of 2595 song lyrics, bigger than most of the current publicly available datasets.</span> It's {{ date | date:'l, d F, Y' }} at {{ date | time:'H:i:s' }}.
+    
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<span class="message">There are several researches on this topic [2][3][4] and standard ground truth for it has been improved day by day such as MIREX. Although dataset collected by MIREX has high reputation and is created by many experts, the dataset is limited and is not enough for being train in deep learning. Another reliable one is MoodyLyrics, which uses valence and arousal values of the word based on Russell’s model and consists of 2595 song lyrics, bigger than most of the current publicly available datasets. There are also some others hand-labeled datasets which were created for private projects and are not public. [5]. 
+    To determine mood of a song, some studies use lexicon based whereas some others apply machine learning. Our proposed method is to combine both of the two methods, using lexicon based for pre-processing and trying CNN, GRU, LSTM model to find the best result. To extract feature, the authors use pre-trained word vectors like fasttext, word2vec, GloVe to find out the best solution. To validate the quality of the mood, the authors compared their models with two other researches with the same dataset [6][7]. The evaluation process reveals an accuracy of 74.5%, which is better than the accuracy of Naïve Bayes method, with 72.5%, and also higher than 74.25% of Lexicon based method.(sau này sẽ thêm vì chưa làm nè). By combining deep learning and lexicon based, the authors improved the accuracy measure. Moreover, a demo website was created for users to try and expand dataset by user feedbacks. The website can be found at [8] 
+    The rest of the paper is organized as follow: Section 2 reveals some related works on music mood classification and explain why the authors choose a dataset. Section 3 introduces the authors’ proposed method using to analyze lyrics of a song. Section 4 describes method of applying LSTM network to examine MFCC features from the audio dataset. Section 5 presents the results and discuss some future works.</span> It's {{ date | date:'l, d F, Y' }} at {{ date | time:'H:i:s' }}. 
+{% endblock %}

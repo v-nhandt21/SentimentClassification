@@ -1,0 +1,28 @@
+{% extends "Machine/layout.html" %}
+{% block title %}
+Demo
+{% endblock %}
+{% block content %}
+    <center><div class="a">Music mood classification</div></center>
+    <center>
+        <form action='.' method="POST" class="message">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="SUBMIT"/>
+            
+        </form>
+    </center>
+    {%if result%}
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <span class="message">Mood of the song seem <strong class="RED">{{result}}</strong> base on its lyrics {{form.songLyric}} </span>
+    {% endif %}
+{% endblock %}

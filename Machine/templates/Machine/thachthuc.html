@@ -1,0 +1,28 @@
+{% extends "Machine/layout.html" %}
+{% block title %}
+Thach Thuc
+{% endblock %}
+{% block content %}
+    <center><div class="a">April Weather</div></center>
+    <center>
+        <form action='.' method="POST" class="message">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="SUBMIT"/>
+            
+        </form>
+    </center>
+    {%if result%}
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br>
+    <span class="message"><strong class="RED">{{result}}</strong> </span>
+    {% endif %}
+{% endblock %}

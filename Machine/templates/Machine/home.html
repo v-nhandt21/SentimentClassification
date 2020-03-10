@@ -1,0 +1,19 @@
+{% extends "Machine/layout.html" %}
+{% block title %}
+
+Home
+
+
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<p>Paper for this project</p>
+<style>
+    .container{padding: 30px;}
+</style>
+<center class="container">
+    <embed src="{% static 'doc/paper.pdf' %}" width="1000" height="800" type="application/pdf">
+</center>
+
+{% endblock %}
